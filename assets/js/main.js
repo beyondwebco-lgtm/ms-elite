@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'kitchen-general': {
       label: 'General Kitchen Package',
       type: 'fixed',
-      price: 1000
+      price: 1200
     },
     'kitchen-deep': {
       label: 'Kitchen Deep Cleaning Package',
