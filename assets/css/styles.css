@@ -267,12 +267,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand-logo {
   display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1.5px solid var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(58, 33, 24, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), width var(--transition-normal), height var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(201, 164, 92, 0.35);
+}
+
+.brand-text {
+  display: flex;
   flex-direction: column;
 }
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--bg-dark-brown);
   letter-spacing: 1px;
@@ -285,6 +308,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.navbar.scrolled .brand-logo-img {
+  width: 44px;
+  height: 44px;
 }
 
 .nav-menu {
@@ -1452,14 +1481,23 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 60px;
 }
 
+.footer-brand .footer-logo {
+  margin-bottom: 16px;
+}
+
 .footer-brand .brand-name {
   color: var(--text-white);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+}
+
+.footer-logo .brand-logo-img {
+  border-color: rgba(201, 164, 92, 0.7);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .footer-brand p {
   color: rgba(255, 255, 255, 0.7);
-  margin-top: 14px;
+  margin-top: 10px;
   font-size: 0.95rem;
   max-width: 360px;
 }
@@ -1593,8 +1631,31 @@ h1, h2, h3, h4, h5, h6 {
   body {
     padding-bottom: 60px;
   }
+  .brand-logo-img {
+    width: 42px;
+    height: 42px;
+  }
+  .brand-name {
+    font-size: 1.18rem;
+  }
+  .brand-subtitle {
+    font-size: 0.62rem;
+  }
   .floating-whatsapp {
     bottom: 80px;
     right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .brand-logo {
+    gap: 10px;
+  }
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
   }
 }
